@@ -6,10 +6,39 @@
              Title="Login_Page">
              
     <VerticalStackLayout>
-        <Label 
-            
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label
+        Text="Login"
+        SemanticProperties.HeadingLevel="Level1"
+        FontSize="32" 
+        FontFamily="Bold"
+        TextColor="#131b1c"
+        HorizontalOptions="Center" />
+
+        <Label
+        Text="Username"
+        SemanticProperties.HeadingLevel="Level2"
+        FontSize="20" 
+        FontFamily="Bold"
+        TextColor="#131b1c"/>
+
+        <Entry x:Name="Username"
+               Placeholder="Please Enter Your Username"
+               PlaceholderColor="#131b1c"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label
+            Text="Password"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="20" 
+            FontFamily="Bold"
+            TextColor="#131b1c"/>
+
+        <Entry x:Name="Password"
+           Placeholder="Please Enter Your Password"
+           PlaceholderColor="#131b1c"
+           TextChanged="OnEntryTextChanged"
+           Completed="OnEntryCompleted" />
 
         <!--<TextBox 
             Width="500" Header="Notes" PlaceholderText="Enter Your Username Here"/>-->
