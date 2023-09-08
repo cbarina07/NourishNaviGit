@@ -4,14 +4,71 @@
              x:Class="NourishNaviGit.Signup_Page"
              BackgroundImageSource="background.png"
              Title="Signup_Page">
-    <VerticalStackLayout>
-        <Label 
-            Text="Signup"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+        BackgroundColor="#20FFFFFF"
+        Spacing="20"
+        Padding="25,25"
+        Margin="20,60,20,60">
 
-        
-       
+        <Label
+        Text="Sign-Up"
+        SemanticProperties.HeadingLevel="Level1"
+        FontSize="32" 
+        FontFamily="Bold"
+        TextColor="#131b1c"
+        HorizontalOptions="Center" />
+
+        <Label
+        Text="Enter Your Name"
+        SemanticProperties.HeadingLevel="Level2"
+        FontSize="15" 
+        FontFamily="Bold"
+        TextColor="#131b1c"/>
+
+        <Entry x:Name="Name"
+           Placeholder="Name"
+           PlaceholderColor="#131b1c" />
+
+        <Label
+            Text="Enter Your Email"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="15" 
+            FontFamily="Bold"
+            TextColor="#131b1c"/>
+
+        <Entry x:Name="Email"
+           Placeholder="Email"
+           PlaceholderColor="#131b1c" />    
+
+        <Label
+        Text="Create A Username"
+        SemanticProperties.HeadingLevel="Level2"
+        FontSize="15" 
+        FontFamily="Bold"
+        TextColor="#131b1c"/>
+
+        <Entry x:Name="Username"
+           Placeholder="Username"
+           PlaceholderColor="#131b1c" />
+        <!--TextChanged="OnEntryTextChanged"
+           Completed="OnEntryCompleted"-->
+
+        <Label
+        Text="Create A Password"
+        SemanticProperties.HeadingLevel="Level2"
+        FontSize="15" 
+        FontFamily="Bold"
+        TextColor="#131b1c"/>
+
+        <Entry x:Name="Password"
+       Placeholder="Password"
+       PlaceholderColor="#131b1c" />
+
+        <!--TextChanged="OnEntryTextChanged"
+       Completed="OnEntryCompleted"-->
+
+
+
         <!--<Button
         x:Name="CreateAccount"
         Text="Create"
