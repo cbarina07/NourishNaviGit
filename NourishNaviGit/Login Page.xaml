@@ -5,7 +5,12 @@
              BackgroundImageSource="background.png"
              Title="Login_Page">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        BackgroundColor="#20FFFFFF"
+        Spacing="20"
+        Padding="25,25"
+        Margin="20,150,20,200">
+        
         <Label
         Text="Login"
         SemanticProperties.HeadingLevel="Level1"
