@@ -4,7 +4,7 @@
              x:Class="NourishNaviGit.Login_Page"
              BackgroundImageSource="background.png"
              Title="Login_Page">
-             
+
     <VerticalStackLayout>
         <Label
         Text="Login"
@@ -49,6 +49,6 @@
             BackgroundColor="DarkGoldenrod"
             SemanticProperties.Hint="Signs user into NourishNavi"
             Clicked="OnLoginBtnClicked"
-            HorizontalOptions="Center" />-->   
+            HorizontalOptions="Center" />-->
     </VerticalStackLayout>
 </ContentPage>
