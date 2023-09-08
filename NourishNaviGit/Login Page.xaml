@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NourishNaviGit.Login_Page"
+             BackgroundImageSource="background.png"
+             Title="Login_Page">
+             
+    <VerticalStackLayout>
+        <Label 
+            
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <TextBox 
+            Width="500" Header="Notes" PlaceholderText="Enter Your Username Here"/>
+
+        <Button
+            x:Name="Login"
+            Text="Login"
+            BackgroundColor="DarkGoldenrod"
+            SemanticProperties.Hint="Signs user into NourishNavi"
+            Clicked="OnLoginBtnClicked"
+            HorizontalOptions="Center" />   
+    </VerticalStackLayout>
+</ContentPage>
