@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PromptCreate.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="This is a full demonstration of the prompt generating code!"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <CheckBox x:Name="entrySimple"/>
+            <Entry x:Name="entryAge" Placeholder="How old are you?" Text="None" />
+            <!--Radio buttons-->
+            <Entry x:Name="entryGender" Placeholder="What gender are you?" Text="None" />
+            <!--Radio buttons-->
+            <Entry x:Name="entryActivity" Placeholder="How active are you?" Text="None" />
+            <!--Checkboxes-->
+            <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?" Text="None" />
+            <!--Check boxes-->
+            <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?" Text="None" />
+            <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?" Text="None" />
+            <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?" Text="None" />
+            <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?" Text="None" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
