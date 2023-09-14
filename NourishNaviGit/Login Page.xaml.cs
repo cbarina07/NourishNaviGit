@@ -6,18 +6,10 @@ public partial class Login_Page : ContentPage
 	{
 		InitializeComponent();
 	}
-
-	//void OnEntryTextChanged(object sender, TextChangedEventArgs e)
- //   {
- //       string oldText = e.OldTextValue;
- //       string newText = e.NewTextValue;
- //       string myText = entry.Text;
-    }
-
-    //void OnEntryCompleted(object sender, EventArgs e)
-    //{
-    //    string text = ((Entry)sender).Text;
-    //}
+	private async void OnLogBtnClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new HomePage());
+	}
+}
 
 
-   

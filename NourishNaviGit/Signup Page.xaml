@@ -69,13 +69,13 @@
 
 
 
-        <!--<Button
+        <Button
         x:Name="CreateAccount"
         Text="Create"
         BackgroundColor="DarkGoldenrod"
         SemanticProperties.Hint="Adds account info to server"
         Clicked="OnCreateBtnClicked"
-        HorizontalOptions="Center" />-->
+        HorizontalOptions="Center" />
 
 
     </VerticalStackLayout>

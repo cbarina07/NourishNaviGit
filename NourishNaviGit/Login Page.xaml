@@ -46,15 +46,14 @@
            <!--TextChanged="OnEntryTextChanged"
            Completed="OnEntryCompleted"--> 
 
-        <!--<TextBox 
-            Width="500" Header="Notes" PlaceholderText="Enter Your Username Here"/>-->
-
-        <!--<Button
-            x:Name="Login"
+        <Button
+            x:Name="Log"
             Text="Login"
             BackgroundColor="DarkGoldenrod"
             SemanticProperties.Hint="Signs user into NourishNavi"
-            Clicked="OnLoginBtnClicked"
-            HorizontalOptions="Center" />-->
+            Clicked="OnLogBtnClicked"
+            HorizontalOptions="Center" />
+            
+        
     </VerticalStackLayout>
 </ContentPage>

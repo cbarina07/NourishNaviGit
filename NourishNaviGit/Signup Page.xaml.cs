@@ -14,10 +14,10 @@ public partial class Signup_Page : ContentPage
        
     }
 
-    //placeholder
+    //placeholder (Will take user back to homepage to login after account created is displayed wait 5 seconds)
     public string yourFunction()
     {
-        return "you clicked the button yay";
+        return "Account Created";
     }
     //end of placeholder
 }
