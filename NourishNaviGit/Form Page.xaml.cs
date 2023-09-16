@@ -11,7 +11,7 @@
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-                CounterBtn.Text = writePrompt();
+                PromptBtn.Text = writePrompt();
 
         }
 

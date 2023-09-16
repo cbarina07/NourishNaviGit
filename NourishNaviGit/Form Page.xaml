@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#36454F"
              x:Class="PromptCreate.MainPage">
 
     <ScrollView>
@@ -16,9 +17,10 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Let NourishNavi know what you want!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                TextColor="white"
                 HorizontalOptions="Center" />
 
             <Label
@@ -29,21 +31,52 @@
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="CounterBtn"
+                x:Name="PromptBtn"
                 Text="Click me"
                 SemanticProperties.Hint="Executes prompt building code based on stored parameters"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
             <CheckBox x:Name="entrySimple"/>
+
+            <Label Text="How old are you?"></Label>
             <Entry x:Name="entryAge" Placeholder="How old are you?"/>
             <!--Radio buttons-->
-            <Entry x:Name="entryGender" Placeholder="What gender are you?"/>
-            <!--Radio buttons-->
+
+            <Label Text="What gender do you identify with?"></Label>
+            <Entry x:Name="entryGender" Placeholder="What gender do you identify with?"/>
+            <RadioButton Content="Male" />
+            <RadioButton Content="Female" />
+            <RadioButton Content="Non-Binary" />
+            <RadioButton Content="Prefer Not to Say" />
+
+            <Label Text="How active are you?"></Label>
             <Entry x:Name="entryActivity" Placeholder="How active are you?"/>
-            <!--Checkboxes-->
-            <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>
-            <!--Check boxes-->
+            <RadioButton Content="Not At All (0-1 days a week)" />
+            <RadioButton Content="A Little Active (1-2 days a week)" />
+            <RadioButton Content="Active (2-4 days a week)" />
+            <RadioButton Content="Very Active (5+ days a week)" />
+              
+            <!--will have to change how the prompt works with this maybe?-->
+            <!--<Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>-->
+            <Label Text="How many meals do you want to include?"></Label>
+            <AbsoluteLayout Margin="10">
+            <Label Text="Breakfast" Margin="20,0,0,0" />
+                <CheckBox x:Name="Breakfast" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout Margin="10">
+                <Label Text="Lunch" Margin="20,0,0,0" />
+                <CheckBox x:Name="Lunch" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout Margin="10">
+                <Label Text="Dinner" Margin="20,0,0,0" />
+                <CheckBox x:Name="Dinner" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout Margin="10">
+                <Label Text="Snacks" Margin="20,0,0,0" />
+                <CheckBox x:Name="Snacks" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+            </AbsoluteLayout>
+
             <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?"/>
             <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?"/>
             <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
