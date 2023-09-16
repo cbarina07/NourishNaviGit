@@ -1,5 +1,5 @@
-﻿namespace PromptCreate
-{
+﻿namespace PromptCreate;
+
     public partial class MainPage : ContentPage
     {
         //int count = 0;
@@ -119,4 +119,3 @@
             return promptFull;
         }
     }
-}

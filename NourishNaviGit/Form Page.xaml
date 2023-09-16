@@ -36,18 +36,18 @@
                 HorizontalOptions="Center" />
 
             <CheckBox x:Name="entrySimple"/>
-            <Entry x:Name="entryAge" Placeholder="How old are you?" Text="None" />
+            <Entry x:Name="entryAge" Placeholder="How old are you?"/>
             <!--Radio buttons-->
-            <Entry x:Name="entryGender" Placeholder="What gender are you?" Text="None" />
+            <Entry x:Name="entryGender" Placeholder="What gender are you?"/>
             <!--Radio buttons-->
-            <Entry x:Name="entryActivity" Placeholder="How active are you?" Text="None" />
+            <Entry x:Name="entryActivity" Placeholder="How active are you?"/>
             <!--Checkboxes-->
-            <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?" Text="None" />
+            <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>
             <!--Check boxes-->
-            <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?" Text="None" />
-            <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?" Text="None" />
-            <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?" Text="None" />
-            <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?" Text="None" />
+            <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?"/>
+            <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?"/>
+            <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
+            <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?"/>
         </VerticalStackLayout>
     </ScrollView>
 

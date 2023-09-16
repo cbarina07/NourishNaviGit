@@ -11,6 +11,18 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Button
+            x:Name="form"
+            Text="Take the Survey"
+            BackgroundColor="DarkGoldenrod"
+            SemanticProperties.Hint="Takes you to the form page"
+            Clicked="OnFormBtnClicked"
+            HorizontalOptions="Center" />   
+
+
+
+
+
         </VerticalStackLayout>
     </ScrollView>
 
