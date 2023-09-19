@@ -59,15 +59,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="formPage.xaml.cs">
-	    <DependentUpon>FormPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="FormPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

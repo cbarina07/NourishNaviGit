@@ -1,15 +1,25 @@
-﻿namespace PromptCreate;
+﻿namespace NourishNaviGit;
 
-    public partial class MainPage : ContentPage
+    public partial class FormPage : ContentPage
     {
         //int count = 0;
 
-        public MainPage()
+        public FormPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnLoginBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login_Page());
+        }
+
+        private async void OnSignupBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Signup_Page());
+        }
+
+    private void OnCounterClicked(object sender, EventArgs e)
         {
                 CounterBtn.Text = writePrompt();
 
