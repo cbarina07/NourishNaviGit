@@ -51,8 +51,8 @@
             <RadioButton Content="Very Active (5+ days a week)" />
               
             <!--will have to change how the prompt works with this maybe?-->
-            <!--<Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>-->
-            <Label Text="How many meals do you want to include?"></Label>
+            <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>
+                <Label Text="How many meals do you want to include?"></Label>
             <AbsoluteLayout Margin="10">
             <Label Text="Breakfast" Margin="20,0,0,0" />
                 <CheckBox x:Name="Breakfast" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
