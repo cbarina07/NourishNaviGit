@@ -55,19 +55,19 @@
                 <Label Text="How many meals do you want to include?"></Label>
             <AbsoluteLayout Margin="10">
             <Label Text="Breakfast" Margin="20,0,0,0" />
-                <CheckBox x:Name="Breakfast" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+                <CheckBox x:Name="Breakfast" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Lunch" Margin="20,0,0,0" />
-                <CheckBox x:Name="Lunch" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+                <CheckBox x:Name="Lunch" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Dinner" Margin="20,0,0,0" />
-                <CheckBox x:Name="Dinner" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+                <CheckBox x:Name="Dinner" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Snacks" Margin="20,0,0,0" />
-                <CheckBox x:Name="Snacks" Color="Orange" CheckedChanged="OnCheckBoxCheckedChanged" Margin="15"/>
+                <CheckBox x:Name="Snacks" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
 
             <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?"/>

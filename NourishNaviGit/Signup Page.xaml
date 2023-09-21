@@ -64,10 +64,6 @@
        Placeholder="Password"
        PlaceholderColor="#131b1c" />
 
-        <!--TextChanged="OnEntryTextChanged"
-       Completed="OnEntryCompleted"-->
-
-
 
         <Button
         x:Name="CreateAccount"
