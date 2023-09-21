@@ -58,7 +58,6 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\background.jpg" />
-	  <None Remove="Resources\Images\header.jpeg" />
 	  <None Remove="Resources\Images\logo.png" />
 	</ItemGroup>
 
