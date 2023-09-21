@@ -3,14 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NourishNaviGit.HomePage"
              Title="HomePage"
-             BackgroundImageSource="background.png">
+             BackgroundImageSource="homebackground.jpg">
     <ScrollView>
 
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-            
+
+
+
+            <Label
+            Text="Hello, (username)" 
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32" 
+            FontFamily="Bold"
+            TextColor="#131b1c"
+            HorizontalOptions="Center" />
 
             <Button
             x:Name="form"
@@ -18,7 +27,16 @@
             BackgroundColor="DarkGoldenrod"
             SemanticProperties.Hint="Takes you to the form page"
             Clicked="OnFormBtnClicked"
-            HorizontalOptions="Center" />   
+            />
+
+
+            <Button
+            x:Name="User"
+            Text="About Me"
+            BackgroundColor="DarkGoldenrod"
+            SemanticProperties.Hint="Takes you to the about me page"
+            Clicked="OnUserBtnClicked"
+            />
 
 
 

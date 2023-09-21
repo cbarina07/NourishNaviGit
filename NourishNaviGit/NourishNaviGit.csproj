@@ -58,6 +58,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\background.jpg" />
+	  <None Remove="Resources\Images\homebackground.jpg" />
 	  <None Remove="Resources\Images\logo.png" />
 	</ItemGroup>
 
@@ -67,13 +68,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="About Me.xaml.cs">
+	    <DependentUpon>About Me.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Login Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="NewPage1.xaml">
+	  <MauiXaml Update="About Me.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Signup Page.xaml">

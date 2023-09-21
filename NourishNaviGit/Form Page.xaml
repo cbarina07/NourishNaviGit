@@ -76,29 +76,6 @@
             <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
             <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?"/>
 
-            <Label
-                Text="Login Or Sign Up"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="NourishNavi, your AI Grocery Navigenius"
-                FontSize="18"
-                TextColor="#131b1c"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="LoginBtn"
-                Text="Login"
-                BackgroundColor="DarkGoldenrod"
-                SemanticProperties.Hint="Takes you to the login page"
-                Clicked="OnLoginBtnClicked"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="SignupBtn"
-                Text="Sign-Up"
-                BackgroundColor="DarkGoldenrod"
-                SemanticProperties.Hint="Takes you to the sign up page "
-                Clicked="OnSignupBtnClicked"
-                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 

@@ -9,16 +9,6 @@
             InitializeComponent();
         }
 
-        private async void OnLoginBtnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Login_Page());
-        }
-
-        private async void OnSignupBtnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Signup_Page());
-        }
-
     private void OnCounterClicked(object sender, EventArgs e)
         {
                 PromptBtn.Text = writePrompt();
