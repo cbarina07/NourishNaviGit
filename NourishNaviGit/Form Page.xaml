@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="#36454F"
-             x:Class="PromptCreate.MainPage">
+             x:Class="NourishNaviGit.FormPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -10,25 +9,19 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Image Source="logo.png">
+                <Image.Clip>
+                    <EllipseGeometry Center="165,110" RadiusX="90" RadiusY="90" />
+                </Image.Clip>
+            </Image>
 
             <Label
-                Text="Let NourishNavi know what you want!"
+                Text="NourishNavi"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                TextColor="white"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="This is a full demonstration of the prompt generating code!"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                FontSize="32" 
+                FontFamily="Bold"
+                TextColor="#131b1c"
+                HorizontalOptions="Center" />   
 
             <Button
                 x:Name="PromptBtn"
@@ -81,6 +74,30 @@
             <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?"/>
             <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
             <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?"/>
+
+            <Label
+                Text="Login Or Sign Up"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="NourishNavi, your AI Grocery Navigenius"
+                FontSize="18"
+                TextColor="#131b1c"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="LoginBtn"
+                Text="Login"
+                BackgroundColor="DarkGoldenrod"
+                SemanticProperties.Hint="Takes you to the login page"
+                Clicked="OnLoginBtnClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="SignupBtn"
+                Text="Sign-Up"
+                BackgroundColor="DarkGoldenrod"
+                SemanticProperties.Hint="Takes you to the sign up page "
+                Clicked="OnSignupBtnClicked"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 
