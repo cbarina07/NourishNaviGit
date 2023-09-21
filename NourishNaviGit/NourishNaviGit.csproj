@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\background.jpg" />
 	  <None Remove="Resources\Images\homebackground.jpg" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\profile.png" />
 	</ItemGroup>
 
 	<ItemGroup>
