@@ -16,6 +16,13 @@
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
 
+            
+            <Label x:Name="GeneratedResponseTextBlock"
+                   Text="Generated Response Will Appear Here"
+                   FontSize="16"
+                   TextColor="#131b1c"
+                   HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 

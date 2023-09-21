@@ -296,7 +296,7 @@ public partial class FormPage : ContentPage
         string generatedPrompt = PromptGenerator.WritePrompt(age, gender, activity, meals, diet, allergy, dislikes, likes);
 
         // Navigate to the generation page
-        await Navigation.PushAsync(new GenerationPage(generatedPrompt));
+        await Navigation.PushAsync(new GenerationPage());
     }
 }
         
