@@ -12,7 +12,7 @@ public partial class FormPage : ContentPage
     {
         InitializeComponent();
 
-        // Adding radio buttons to dictionary
+        // Adding radio buttons to dictionary so that clicking a radio button in one section doesnt unclick radio buttons in other sections 
         AddRadioButtonToGroup("Gender", MaleRadioButton);
         AddRadioButtonToGroup("Gender", FemaleRadioButton);
         AddRadioButtonToGroup("Gender", NonBinaryRadioButton);
@@ -30,6 +30,8 @@ public partial class FormPage : ContentPage
         AddRadioButtonToGroup("Diet", HalalRadioButton);
         AddRadioButtonToGroup("Diet", OtherDietRadioButton);
 
+
+        //UNCERTAIN IF I NEED THIS SO JUST UNCOMMENTING FOR NOW
         //AddRadioButtonToGroup("Dislikes", NoDislikes);
         //AddRadioButtonToGroup("Dislikes", YesDislikes);
 
@@ -38,7 +40,7 @@ public partial class FormPage : ContentPage
 
 
 
-        // Add event handlers for radio button checked changes
+        // adding check changed to each radio button
         foreach (var group in radioButtonGroups.Values)
         {
             foreach (var radioButton in group)
@@ -72,10 +74,23 @@ public partial class FormPage : ContentPage
             {
                 otherRadioButton.IsChecked = false;
             }
+            // Check if the selected radio button is not the "Other (Please specify)" option
+            if (radioButton != OtherDietRadioButton)
+            {
+                // If anything is checked other than "Other," hide the entry field
+                entryDiet.IsVisible = false;
+            }
+            else
+            {
+                // If "Other" is checked, show the entry field
+                // means that people wont be able to select vegeterian and then also type something in "other"
+                entryDiet.IsVisible = true;
+            }
+
         }
     }
 
-
+    // means that the extended prompt answer will only show if circumstance is met
     private void NoDietRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         if (e.Value)
@@ -154,7 +169,13 @@ public partial class FormPage : ContentPage
             selectedMeals.Add("Snacks");
         }
 
-        // Combine the selected meals into a comma-separated string
+        // Combine the selected meals into a string with "AND" before the last option
+        if (selectedMeals.Count > 1)
+        {
+            string lastMeal = selectedMeals.Last();
+            selectedMeals[selectedMeals.Count - 1] = "and " + lastMeal;
+        }
+
         string selectedMealsString = string.Join(", ", selectedMeals);
 
         return selectedMealsString;
@@ -255,7 +276,7 @@ public partial class FormPage : ContentPage
         string allergy;
         if (YesAllergy.IsChecked)
         {
-            allergy = "Yes, " + entryAllergy.Text;
+            allergy = entryAllergy.Text;
         }
         else
         {
@@ -271,6 +292,10 @@ public partial class FormPage : ContentPage
         //LIKES//
         string likes = entryLikes.Text;
 
+        
+        
+        
+        
         // Display "Generating" on the button
         PromptBtn.Text = "Generating...";
 

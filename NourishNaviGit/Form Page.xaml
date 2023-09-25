@@ -44,7 +44,7 @@
             <RadioButton x:Name="LittleActivityRadioButton"  Content="A Little Active (1-2 days a week)" GroupName="Activity" />
             <RadioButton x:Name="QuiteActiveRadioButton"  Content="Active (2-4 days a week)" GroupName="Activity" />
             <RadioButton x:Name="VeryActiveRadioButton" Content="Very Active (5+ days a week)" GroupName="Activity"/>
-              
+
             <!--NUMBER OF MEALS-->
             <Label Text="How many meals do you want to include?"></Label>
             <AbsoluteLayout Margin="10">
