@@ -24,12 +24,7 @@
                 TextColor="#131b1c"
                 HorizontalOptions="Center" />   
 
-            <Button
-                x:Name="PromptBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Executes prompt building code based on stored parameters"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            
 
             <CheckBox x:Name="entrySimple"/>
 
@@ -75,6 +70,12 @@
             <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?"/>
             <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
             <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?"/>
+
+            <Button
+            x:Name="PromptBtn"
+            Text="Click me"
+            SemanticProperties.Hint="Executes prompt building code based on stored parameters"
+            Clicked="OnPromptClicked"/>
 
         </VerticalStackLayout>
     </ScrollView>
