@@ -182,15 +182,6 @@ public partial class FormPage : ContentPage
     }
 
 
-
-
-
-
-
-
-
-
-
     //GET USER INPUT TOTAL METHOD
     private async void OnPromptClicked(object sender, EventArgs e)
     {
