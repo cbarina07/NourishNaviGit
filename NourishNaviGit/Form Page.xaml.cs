@@ -259,7 +259,7 @@ public partial class FormPage : ContentPage
         }
         else if (OtherDietRadioButton.IsChecked)
         {
-            diet = "Other: " + entryDiet.Text;
+            diet = entryDiet.Text;
         }
 
 

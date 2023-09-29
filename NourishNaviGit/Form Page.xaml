@@ -95,9 +95,15 @@
             <RadioButton x:Name="YesLikes" Content="Yes (Please Specify)" GroupName="Likes"/>
             <Entry x:Name="entryLikes" Placeholder="Enter Cravings Here"/>
 
+            <!--<Button
+            x:Name="SpecificsBtn"
+            Text="Advanced Options"
+            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"
+            Clicked="OnSpecificsClicked"/>--> 
+
             <Button
             x:Name="PromptBtn"
-            Text="Click me"
+            Text="Generate"
             SemanticProperties.Hint="Executes prompt building code based on stored parameters"
             Clicked="OnPromptClicked"/>
 
