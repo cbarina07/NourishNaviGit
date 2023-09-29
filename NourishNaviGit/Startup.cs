@@ -20,8 +20,8 @@ namespace NourishNaviGit
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             // Configure your database context
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(connectionString));
 
             // Other services configuration...
         }
