@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NourishNaviGit.GenerationPage"
@@ -15,8 +14,36 @@
                    FontSize="16"
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
+            <Label x:Name="GeneratedResponseTextBlock"
+                   Text="Generated Response Will Appear Here"
+                   FontSize="16"
+                   TextColor="#131b1c"
+                   HorizontalOptions="Center" />
 
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="Decline"
+                    Text="Decline"
+                    BackgroundColor="DarkGoldenrod"
+                    SemanticProperties.Hint="Signs user into NourishNavi"
+                    Margin="5"
+                    Padding="10,5"
+                    HorizontalOptions="StartAndExpand" />
+                
+
+                <Button
+                    x:Name="Confirm"
+                    Text="Confirm"
+                    BackgroundColor="DarkGoldenrod"
+                    SemanticProperties.Hint="Signs user into NourishNavi"
+                    Clicked="OnConfirmClicked"
+                    Margin="5"
+                    Padding="10,5"
+                    HorizontalOptions="End" />
+                
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
