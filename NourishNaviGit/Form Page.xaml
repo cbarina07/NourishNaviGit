@@ -98,8 +98,7 @@
             <!--<Button
             x:Name="SpecificsBtn"
             Text="Advanced Options"
-            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"
-            Clicked="OnSpecificsClicked"/>--> 
+            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"            Clicked="OnSpecificsClicked"/>--> 
 
             <Button
             x:Name="PromptBtn"
