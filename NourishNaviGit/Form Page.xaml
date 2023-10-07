@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NourishNaviGit.FormPage">
+             x:Class="NourishNaviGit.FormPage"
+             BackgroundImageSource="background.png">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            BackgroundColor="#20FFFFFF"
+            Spacing="20"
+            Padding="25,25"
+            Margin="20,150,20,200">
 
+            
             <Image Source="logo.png">
                 <Image.Clip>
                     <EllipseGeometry Center="165,110" RadiusX="90" RadiusY="90" />
@@ -21,27 +24,26 @@
                 FontSize="32" 
                 FontFamily="Bold"
                 TextColor="#131b1c"
-                HorizontalOptions="Center" />   
-
-            <Button
-                x:Name="PromptBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Executes prompt building code based on stored parameters"
-                Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-            <CheckBox x:Name="entrySimple"/>
+            <!--AGE-->
+            <Label Text="How old are you?" FontSize="20"></Label>
+            <Entry x:Name="entryAge" Placeholder="Enter Age"/>
 
-            <Label Text="How old are you?"></Label>
-            <Entry x:Name="entryAge" Placeholder="How old are you?"/>
-            <!--Radio buttons-->
+            <!--GENDER-->
+            <Label Text="What gender do you identify with?" FontSize="20" ></Label>
+            <RadioButton x:Name="MaleRadioButton" Content="Male" GroupName="Gender" />
+            <RadioButton x:Name="FemaleRadioButton" Content="Female" GroupName="Gender"/>
+            <RadioButton x:Name="NonBinaryRadioButton"  Content="Non-Binary" GroupName="Gender"/>
+            <RadioButton x:Name="OtherRadioButton"  Content="Other/ Prefer Not To Say" GroupName="Gender"/>
+          
 
-            <Label Text="What gender do you identify with?"></Label>
-            <Entry x:Name="entryGender" Placeholder="What gender do you identify with?"/>
-            <RadioButton Content="Male" />
-            <RadioButton Content="Female" />
-            <RadioButton Content="Non-Binary" />
-            <RadioButton Content="Prefer Not to Say" />
+            <!--ACTIVITY LEVEL-->
+            <Label Text="How active are you?" FontSize="20" ></Label>
+            <RadioButton x:Name="NoActivityRadioButton" Content="Not At All (0-1 days a week)" GroupName="Activity" />
+            <RadioButton x:Name="LittleActivityRadioButton"  Content="A Little Active (1-2 days a week)" GroupName="Activity" />
+            <RadioButton x:Name="QuiteActiveRadioButton"  Content="Active (2-4 days a week)" GroupName="Activity" />
+            <RadioButton x:Name="VeryActiveRadioButton" Content="Very Active (5+ days a week)" GroupName="Activity"/>
 
             <Label Text="How active are you?"></Label>
             <Entry x:Name="entryActivity" Placeholder="How active are you?"/>
@@ -52,55 +54,67 @@
               
             <!--will have to change how the prompt works with this maybe?-->
             <Entry x:Name="entryMeals" Placeholder="What meals do you want to include?"/>
-            <Label Text="How many meals do you want to include?"></Label>
+                <Label Text="How many meals do you want to include?"></Label>
             <AbsoluteLayout Margin="10">
-            <Label Text="Breakfast" Margin="20,0,0,0" />
-                <CheckBox x:Name="Breakfast" Color="Orange" Margin="15"/>
+                <Label Text="Breakfast" Margin="20,0,0,0" />
+                <CheckBox x:Name="BreakfastCheckbox" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Lunch" Margin="20,0,0,0" />
-                <CheckBox x:Name="Lunch" Color="Orange" Margin="15"/>
+                <CheckBox x:Name="LunchCheckbox" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Dinner" Margin="20,0,0,0" />
-                <CheckBox x:Name="Dinner" Color="Orange" Margin="15"/>
+                <CheckBox x:Name="DinnerCheckbox" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
             <AbsoluteLayout Margin="10">
                 <Label Text="Snacks" Margin="20,0,0,0" />
-                <CheckBox x:Name="Snacks" Color="Orange" Margin="15"/>
+                <CheckBox x:Name="SnacksCheckbox" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
+            
+            
+            <!--SPECIFIC DIETS-->
+            <Label Text="Do you follow any specific diet?"></Label>
+            <RadioButton x:Name="NoRestrictionsRadioButton" Content="No Diet" GroupName="Diet"/>
+            <RadioButton x:Name="VegetarianRadioButton" Content="Vegetarian" GroupName="Diet"/>
+            <RadioButton x:Name="PescetarianRadioButton" Content="Pescetarian" GroupName="Diet" />
+            <RadioButton x:Name="GlutenFreeRadioButton" Content="Gluten-Free"  GroupName="Diet"/>
+            <RadioButton x:Name="HalalRadioButton" Content="Halal"  GroupName="Diet"/>
+            <RadioButton x:Name="OtherDietRadioButton" Content="Other (Please specify)" GroupName="Diet"/>
+            <Entry x:Name="entryDiet" Placeholder="Enter your specific diet"/>
 
-            <Entry x:Name="entryDiet" Placeholder="Do you have any dietary needs?"/>
-            <Entry x:Name="entryAllergy" Placeholder="What are you allergic to?"/>
-            <Entry x:Name="entryDislikes" Placeholder="Is there anything you don't want included?"/>
-            <Entry x:Name="entryLikes" Placeholder="Is there anything you are craving?"/>
+            <!--FOOD ALLERGIES-->
+            <Label Text="Do you have any food Allergies?"/>
+            <RadioButton x:Name="NoAllergies" Content="No" CheckedChanged="NoAllergiesRadioButton_CheckedChanged" GroupName="Allergies"/>
+            <RadioButton x:Name="YesAllergy" Content="Yes (Please specify)" GroupName="Allergies"/>
+            <Entry x:Name="entryAllergy" Placeholder="Please Enter Food Allergies"/>
 
-            <Label
-                Text="Login Or Sign Up"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="NourishNavi, your AI Grocery Navigenius"
-                FontSize="18"
-                TextColor="#131b1c"
-                HorizontalOptions="Center" />
+            
+            <!--DISLIKES-->
+            <Label Text="Are there any foods you dislike?"/>
+            <RadioButton x:Name="NoDislikes" Content="No" CheckedChanged="NoDislikesRadioButton_CheckedChanged" GroupName="Dislikes"/>
+            <RadioButton x:Name="YesDislikes" Content="Yes (Please Specify)" GroupName="Dislikes"/>
+            <Entry x:Name="entryDislikes" Placeholder="Please Enter Food Dislikes"/>
+
+
+            <!--LIKES-->
+            <Label Text= "Are there any foods you are craving?"/>
+            <RadioButton x:Name="NoLikes" Content="No" CheckedChanged="NoPreferencesRadioButton_CheckedChanged" GroupName="Likes"/>
+            <RadioButton x:Name="YesLikes" Content="Yes (Please Specify)" GroupName="Likes"/>
+            <Entry x:Name="entryLikes" Placeholder="Enter Cravings Here"/>
+
+            <!--<Button
+            x:Name="SpecificsBtn"
+            Text="Advanced Options"
+            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"
+            Clicked="OnSpecificsClicked"/>--> 
 
             <Button
-                x:Name="LoginBtn"
-                Text="Login"
-                BackgroundColor="DarkGoldenrod"
-                SemanticProperties.Hint="Takes you to the login page"
-                Clicked="OnLoginBtnClicked"
-                HorizontalOptions="Center" />
+            x:Name="PromptBtn"
+            Text="Generate"
+            SemanticProperties.Hint="Executes prompt building code based on stored parameters"
+            Clicked="OnPromptClicked"/>
 
-            <Button
-                x:Name="SignupBtn"
-                Text="Sign-Up"
-                BackgroundColor="DarkGoldenrod"
-                SemanticProperties.Hint="Takes you to the sign up page "
-                Clicked="OnSignupBtnClicked"
-                HorizontalOptions="Center" />
-            
-            
-            
         </VerticalStackLayout>
     </ScrollView>
 
