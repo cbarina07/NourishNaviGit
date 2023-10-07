@@ -38,7 +38,6 @@
                     Text="Confirm"
                     BackgroundColor="DarkGoldenrod"
                     SemanticProperties.Hint="Signs user into NourishNavi"
-                    Clicked="OnConfirmClicked"
                     Margin="5"
                     Padding="10,5"
                     HorizontalOptions="End" />

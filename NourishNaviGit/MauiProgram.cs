@@ -1,5 +1,6 @@
 ﻿using ChatGptNet;
 using ChatGptNet.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Logging;
 
 namespace NourishNaviGit
@@ -17,13 +18,31 @@ namespace NourishNaviGit
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // chatgptnet
             builder.Services.AddChatGpt(options =>
             {
                 options.UseOpenAI(apiKey: "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", organization: "NourishNavi");
                 options.DefaultModel = "ChatGptModels.Gpt35Turbo"; // Default: ChatGptModels.Gpt35Turbo
                 options.MessageLimit = 10; // Default: 10
                 options.MessageExpiration = TimeSpan.FromMinutes(5); // Default: 1 hour
-            });
+
+                // end chatgptnet
+
+                //cors
+                var builder = MauiApp.CreateBuilder();
+                var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+                builder.Services.AddCors(options =>
+                {
+                    options.AddPolicy(name: MyAllowSpecificOrigins,
+                                      policy =>
+                                      {
+                                          policy.WithOrigins("https://chat.openai.com/");
+                                      });
+                });
+
+            }
+            
+            );
 
 
 #if DEBUG
