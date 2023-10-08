@@ -14,11 +14,14 @@
                    FontSize="16"
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
-            <Label x:Name="GeneratedResponseTextBlock"
-                   Text="Generated Response Will Appear Here"
+            <Label x:Name="client" 
+                   Text= "" />
+            <Label Text="Are you happy with these restrictions?"
                    FontSize="16"
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
+            
+            
 
             <StackLayout
                 Orientation="Horizontal"
@@ -31,7 +34,7 @@
                     Margin="5"
                     Padding="10,5"
                     HorizontalOptions="StartAndExpand" />
-                
+
 
                 <Button
                     x:Name="Confirm"
@@ -40,8 +43,10 @@
                     SemanticProperties.Hint="Signs user into NourishNavi"
                     Margin="5"
                     Padding="10,5"
-                    HorizontalOptions="End" />
-                
+                    HorizontalOptions="End"
+                    Clicked = "OnConfirmButton_Clicked" />
+
+
             </StackLayout>
         </VerticalStackLayout>
     </ScrollView>

@@ -6,7 +6,7 @@ public partial class FormPage : ContentPage
 {
     //int count = 0;
 
-    private Dictionary<string, List<RadioButton>> radioButtonGroups = new Dictionary<string, List<RadioButton>>();
+    private readonly Dictionary<string, List<RadioButton>> radioButtonGroups = new Dictionary<string, List<RadioButton>>();
 
     public FormPage()
     {
@@ -32,11 +32,11 @@ public partial class FormPage : ContentPage
 
 
         //UNCERTAIN IF I NEED THIS SO JUST UNCOMMENTING FOR NOW
-        //AddRadioButtonToGroup("Dislikes", NoDislikes);
-        //AddRadioButtonToGroup("Dislikes", YesDislikes);
+        AddRadioButtonToGroup("Dislikes", NoDislikes);
+        AddRadioButtonToGroup("Dislikes", YesDislikes);
 
-        //AddRadioButtonToGroup("Likes", Nolikes);
-        //AddRadioButtonToGroup("Likes", Yeslikes);
+        AddRadioButtonToGroup("Likes", NoLikes);
+        AddRadioButtonToGroup("Likes", YesLikes);
 
 
 
@@ -271,22 +271,38 @@ public partial class FormPage : ContentPage
         }
         else
         {
-            allergy = "nothing";
+            allergy = "no food";
         }
 
 
 
         //DISLIKES//
-        string dislikes = entryDislikes.Text;
+        string dislikes;
+        if (YesDislikes.IsChecked)
+        {
+            dislikes = entryDislikes.Text;
+        }
+        else
+        {
+            dislikes = "there is nothing ";
+        }
 
 
         //LIKES//
-        string likes = entryLikes.Text;
+        string likes;
+        if (YesLikes.IsChecked)
+        {
+            likes = entryLikes.Text;
+        }
+        else
+        {
+            likes = "no specific foods";
+        }
 
-        
-        
-        
-        
+
+
+
+
         // Display "Generating" on the button
         PromptBtn.Text = "Generating...";
 

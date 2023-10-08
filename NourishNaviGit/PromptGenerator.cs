@@ -16,8 +16,8 @@ namespace NourishNaviGit
             string sectionMeals = ", I want my meal plan to only include ";
             string sectionDiet = ", my diet is ";
             string sectionAllergy = ", I am allergic to ";
-            string sectionDislikes = ", I'd rather not have ";
-            string sectionLikes = ", and I would like ";
+            string sectionDislikes = ", I dont like ";
+            string sectionLikes = "I have a preference for ";
             string promptOpen = "Write me a daily meal plan for the next week, ";
             string promptSimple = "and return only the titles of each meal";
 
@@ -27,11 +27,11 @@ namespace NourishNaviGit
             string promptMeals = sectionMeals + meals;
             string promptDiet = sectionDiet + diet;
             string promptAllergy = sectionAllergy + allergy;
-            string promptDislikes = sectionDislikes + dislikes;
-            string promptLikes = sectionLikes + likes;
+            string promptDislikes = dislikes + sectionDislikes ;
+            string promptLikes =  sectionLikes + likes ;
 
             // Construct the full prompt
-            string promptFull = promptOpen + promptSimple + ". " + promptAge + " year old " + gender + promptActivity + promptMeals + promptDiet + promptAllergy + promptDislikes + promptLikes + " to be included at least once.";
+            string promptFull = promptOpen + promptSimple + ". " + promptAge + " year old " + gender + promptActivity + promptMeals + promptDiet + promptAllergy + promptDislikes + "and " + promptLikes + " to be included at least once.";
 
             return promptFull;
         }
