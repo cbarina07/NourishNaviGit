@@ -22,7 +22,7 @@
                    HorizontalOptions="Center" />
             
             
-
+<!--The semantic properties are not right-->
             <StackLayout
                 Orientation="Horizontal"
                 HorizontalOptions="Center">

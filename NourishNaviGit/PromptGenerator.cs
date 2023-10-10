@@ -27,7 +27,7 @@ namespace NourishNaviGit
             string promptMeals = sectionMeals + meals;
             string promptDiet = sectionDiet + diet;
             string promptAllergy = sectionAllergy + allergy;
-            string promptDislikes = dislikes + sectionDislikes ;
+            string promptDislikes = sectionDislikes + dislikes;
             string promptLikes =  sectionLikes + likes ;
 
             // Construct the full prompt
