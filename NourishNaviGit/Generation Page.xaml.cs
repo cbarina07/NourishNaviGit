@@ -3,16 +3,51 @@ using System.Diagnostics;
 using System.Reflection;
 using ChatGptNet;
 using ChatGptNet.Models;
+using MySql.Data.MySqlClient;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
+using MySqlX.XDevAPI;
+using Windows.ApplicationModel.VoiceCommands;
+using System.Security.Cryptography;
 
 namespace NourishNaviGit;
 public partial class GenerationPage : ContentPage
-{ 
+{
+    
+    
     // according to tutorial: initialising client stuff should happen outside of the page method
+
+    //initialise sql connection object
+
+
     private IChatGptClient _chatGptClient;
     private void GenPage_Loaded(object sender, EventArgs e)
     {
         _chatGptClient = Handler.MauiContext.Services.GetService<IChatGptClient>();
+    }
+    private async void OnDeclineButton_Clicked(object sender, EventArgs e)
+    {
+        
+        string connectionstring = "Server=localhost; Port=3306;Database=test;user=root;password=NourishNavi;";
+        try
+        {
+            var myconnection = new MySql.Data.MySqlClient.MySqlConnection(connectionstring);
+            myconnection.Open();
+            alertTest.Text = "Connected successfully!";
+
+            // basic write operation attempt here, using https://mysqlconnector.net/tutorials/basic-api/
+            var cmd = new MySqlCommand();
+            cmd.Connection = myconnection;
+
+            cmd.CommandText = "INSERT INTO users (username) VALUES (@p)";
+            // you can use this to mask a certain value into @p
+            cmd.Parameters.AddWithValue("p", "Testing innsert variable here");
+            await cmd.ExecuteNonQueryAsync();
+        }
+        catch (MySql.Data.MySqlClient.MySqlException ex)
+        {
+            alertTest.Text=ex.Message;
+        }  
     }
     public GenerationPage(string generatedPrompt)
     {
