@@ -15,6 +15,17 @@
                    FontSize="16"
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
+
+
+            <Button
+                 x:Name="View Ingredients"
+                 Text="View Ingredients"
+                 BackgroundColor="DarkGoldenrod"
+                 SemanticProperties.Hint="Displays all ingredients needed"
+                 Margin="5"
+                 Padding="10,5"
+                 HorizontalOptions="End"  />
+            <!--Clicked="OnIngredientsButton_Clicked"/>-->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

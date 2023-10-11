@@ -19,11 +19,24 @@
             <Label Text="Are you happy with these restrictions?"
                    FontSize="16"
                    TextColor="#131b1c"
-                   HorizontalOptions="Center" />
+                   WidthRequest="200"
+                   HeightRequest="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"/>
+
+            <Editor x:Name="EditedPromptEditor"
+                Placeholder="Edit your prompt here"
+                IsVisible="false"
+                FontSize="16"
+                TextColor="#131b1c"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="300" 
+                HeightRequest="500"
+                />
             
             
-<!--The semantic properties are not right-->
-            <StackLayout
+                <StackLayout
                 Orientation="Horizontal"
                 HorizontalOptions="Center">
                 <Button
@@ -33,7 +46,8 @@
                     SemanticProperties.Hint="Signs user into NourishNavi"
                     Margin="5"
                     Padding="10,5"
-                    HorizontalOptions="StartAndExpand" />
+                    HorizontalOptions="StartAndExpand" 
+                    Clicked="OnDeclineButton_Clicked"/>
 
 
                 <Button

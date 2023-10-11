@@ -8,13 +8,19 @@ using Microsoft.Maui.Controls;
 
 namespace NourishNaviGit;
 
-    public partial class AIPage : ContentPage
+public partial class AIPage : ContentPage
+{
+    public AIPage(string aiResponse)
     {
-        public AIPage(string aiResponse)
-        {
-            InitializeComponent();
+        InitializeComponent();
 
         // Display the AI response in the UI
         GeneratedResponseTextBlock.Text = aiResponse;
-        }
     }
+}
+
+    //private void OnIngredientsButton_Clicked(object sender, EventArgs e)
+    //{
+    //    await Navigation.PushAsync(new Ingredients(aiResponse));
+    //}
+
