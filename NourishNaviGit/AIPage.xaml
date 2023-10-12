@@ -25,7 +25,9 @@
                  Margin="5"
                  Padding="10,5"
                  HorizontalOptions="End"  />
-            <!--Clicked="OnIngredientsButton_Clicked"/>-->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+
+
+

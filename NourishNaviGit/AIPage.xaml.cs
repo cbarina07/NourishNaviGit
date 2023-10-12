@@ -19,8 +19,3 @@ public partial class AIPage : ContentPage
     }
 }
 
-    //private void OnIngredientsButton_Clicked(object sender, EventArgs e)
-    //{
-    //    await Navigation.PushAsync(new Ingredients(aiResponse));
-    //}
-
