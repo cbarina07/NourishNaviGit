@@ -18,7 +18,7 @@
 
 
             <Button
-                 x:Name="View Ingredients"
+                 x:Name="ViewIngredients"
                  Text="View Ingredients"
                  BackgroundColor="DarkGoldenrod"
                  SemanticProperties.Hint="Displays all ingredients needed"

@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using NourishNaviGit.Data;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 
 namespace NourishNaviGit
 {

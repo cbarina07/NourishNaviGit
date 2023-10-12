@@ -34,9 +34,8 @@
                 WidthRequest="300" 
                 HeightRequest="500"
                 />
-            
-            
-                <StackLayout
+
+            <StackLayout
                 Orientation="Horizontal"
                 HorizontalOptions="Center">
                 <Button
@@ -46,9 +45,8 @@
                     SemanticProperties.Hint="Signs user into NourishNavi"
                     Margin="5"
                     Padding="10,5"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"
                     Clicked="OnDeclineButton_Clicked"/>
-
 
                 <Button
                     x:Name="Confirm"
@@ -57,10 +55,12 @@
                     SemanticProperties.Hint="Signs user into NourishNavi"
                     Margin="5"
                     Padding="10,5"
-                    HorizontalOptions="End"
-                    Clicked = "OnConfirmButton_Clicked" />
+                    HorizontalOptions="End"/>
+                    <!--Clicked = "OnConfirmButton_Clicked" element to be implemented later! -->
 
-
+                <Label
+                    x:Name="alertTest"
+                    Text="testing db connection"/>
             </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
