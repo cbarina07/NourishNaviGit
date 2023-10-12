@@ -17,7 +17,7 @@ public partial class FormPage : ContentPage
         AddRadioButtonToGroup("Gender", FemaleRadioButton);
         AddRadioButtonToGroup("Gender", NonBinaryRadioButton);
         AddRadioButtonToGroup("Gender", OtherRadioButton);
-        
+
         AddRadioButtonToGroup("Activity", NoActivityRadioButton);
         AddRadioButtonToGroup("Activity", LittleActivityRadioButton);
         AddRadioButtonToGroup("Activity", QuiteActiveRadioButton);
@@ -188,7 +188,7 @@ public partial class FormPage : ContentPage
 
         // Gather user input
         string age = entryAge.Text;
-        
+
         //PREFFERRED GENDER
         string gender = "";
         if (MaleRadioButton.IsChecked)
@@ -205,7 +205,7 @@ public partial class FormPage : ContentPage
         }
         else if (OtherRadioButton.IsChecked)
         {
-            gender = "NA"; 
+            gender = "NA";
         }
 
 
@@ -236,11 +236,11 @@ public partial class FormPage : ContentPage
 
         // SPECIFIC DIETS//
         string diet = "";
-        
+
         if (NoRestrictionsRadioButton.IsChecked)
         {
             diet = "Unrestricted";
-        }      
+        }
         else if (VegetarianRadioButton.IsChecked)
         {
             diet = "Vegetarian";
@@ -267,11 +267,11 @@ public partial class FormPage : ContentPage
         string allergy;
         if (YesAllergy.IsChecked)
         {
-            allergy = entryAllergy.Text;
+            allergy = "I am allergic to " + entryAllergy.Text;
         }
         else
         {
-            allergy = "no food";
+            allergy = "";
         }
 
 
@@ -280,11 +280,11 @@ public partial class FormPage : ContentPage
         string dislikes;
         if (YesDislikes.IsChecked)
         {
-            dislikes = entryDislikes.Text;
+            dislikes = " I do not like " + entryDislikes.Text;
         }
         else
         {
-            dislikes = "there is nothing ";
+            dislikes = "";
         }
 
 
@@ -292,11 +292,11 @@ public partial class FormPage : ContentPage
         string likes;
         if (YesLikes.IsChecked)
         {
-            likes = entryLikes.Text;
+            likes = " and I would like " + entryLikes.Text + " to be included in the menu atleast once.";
         }
         else
         {
-            likes = "no specific foods";
+            likes = "";
         }
 
 
@@ -315,4 +315,3 @@ public partial class FormPage : ContentPage
         await Navigation.PushAsync(new GenerationPage(generatedPrompt));
     }
 }
-        

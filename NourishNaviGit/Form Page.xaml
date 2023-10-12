@@ -11,7 +11,7 @@
             Padding="25,25"
             Margin="20,150,20,200">
 
-            
+
             <Image Source="logo.png">
                 <Image.Clip>
                     <EllipseGeometry Center="165,110" RadiusX="90" RadiusY="90" />
@@ -36,7 +36,7 @@
             <RadioButton x:Name="FemaleRadioButton" Content="Female" GroupName="Gender"/>
             <RadioButton x:Name="NonBinaryRadioButton"  Content="Non-Binary" GroupName="Gender"/>
             <RadioButton x:Name="OtherRadioButton"  Content="Other/ Prefer Not To Say" GroupName="Gender"/>
-          
+
 
             <!--ACTIVITY LEVEL-->
             <Label Text="How active are you?" FontSize="20" ></Label>
@@ -63,8 +63,8 @@
                 <Label Text="Snacks" Margin="20,0,0,0" />
                 <CheckBox x:Name="SnacksCheckbox" Color="Orange" Margin="15"/>
             </AbsoluteLayout>
-            
-            
+
+
             <!--SPECIFIC DIETS-->
             <Label Text="Do you follow any specific diet?"></Label>
             <RadioButton x:Name="NoRestrictionsRadioButton" Content="No Diet" GroupName="Diet"/>
@@ -81,7 +81,7 @@
             <RadioButton x:Name="YesAllergy" Content="Yes (Please specify)" GroupName="Allergies"/>
             <Entry x:Name="entryAllergy" Placeholder="Please Enter Food Allergies"/>
 
-            
+
             <!--DISLIKES-->
             <Label Text="Are there any foods you dislike?"/>
             <RadioButton x:Name="NoDislikes" Content="No" CheckedChanged="NoDislikesRadioButton_CheckedChanged" GroupName="Dislikes"/>
@@ -98,7 +98,7 @@
             <!--<Button
             x:Name="SpecificsBtn"
             Text="Advanced Options"
-            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"            Clicked="OnSpecificsClicked"/>--> 
+            SemanticProperties.Hint="Brings user to new survey page which allows more specific answers"            Clicked="OnSpecificsClicked"/>-->
 
             <Button
             x:Name="PromptBtn"

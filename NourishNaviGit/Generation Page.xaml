@@ -25,7 +25,7 @@
                    VerticalOptions="StartAndExpand"/>
 
             <Editor x:Name="EditedPromptEditor"
-                Placeholder="Edit your prompt here"
+                Placeholder=""
                 IsVisible="false"
                 FontSize="16"
                 TextColor="#131b1c"
@@ -55,13 +55,18 @@
                     SemanticProperties.Hint="Signs user into NourishNavi"
                     Margin="5"
                     Padding="10,5"
-                    HorizontalOptions="End"/>
-                    <!--Clicked = "OnConfirmButton_Clicked" element to be implemented later! -->
-
-                <Label
-                    x:Name="alertTest"
-                    Text="testing db connection"/>
+                    HorizontalOptions="End"
+                    Clicked = "OnConfirmButton_Clicked" />
+            
             </StackLayout>
+            <Image Source="giphy.gif" 
+                    x:Name="loading"
+                    HeightRequest="200"
+                    IsVisible="False"
+                    IsAnimationPlaying="False" />
+
+
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

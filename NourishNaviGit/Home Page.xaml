@@ -14,7 +14,7 @@
 
 
             <Label
-            Text="Hello, (username)" 
+            Text="Welcome Back!" 
             SemanticProperties.HeadingLevel="Level1"
             FontSize="32" 
             FontFamily="Bold"
@@ -37,9 +37,6 @@
             SemanticProperties.Hint="Takes you to the about me page"
             Clicked="OnUserBtnClicked"
             />
-
-
-
 
 
         </VerticalStackLayout>

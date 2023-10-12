@@ -9,25 +9,49 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <!-- Add UI elements to display the AI response here -->
             <Label x:Name="GeneratedResponseTextBlock"
                    Text="AI Response Will Appear Here"
+                   IsVisible="True"
+                   FontSize="16"
+                   TextColor="#131b1c"
+                   HorizontalOptions="Center" />
+            <Label x:Name="client" 
+                   Text= "" />
+
+            <Label x:Name="GeneratedIngredientsTextBlock"
+                   Text="AI Ingredients Will Appear Here"
+                   IsVisible="False"
                    FontSize="16"
                    TextColor="#131b1c"
                    HorizontalOptions="Center" />
 
+            <Image Source="loading.gif" 
+                x:Name="ingredients"
+                HeightRequest="200"
+                IsVisible="False"
+                IsAnimationPlaying="False" />
 
             <Button
-                 x:Name="ViewIngredients"
-                 Text="View Ingredients"
+                 x:Name="ShowIngredients"
+                 Text="Show Ingredients"
+                 IsVisible="True"
                  BackgroundColor="DarkGoldenrod"
                  SemanticProperties.Hint="Displays all ingredients needed"
                  Margin="5"
                  Padding="10,5"
-                 HorizontalOptions="End"  />
+                 HorizontalOptions="End"
+                 Clicked="OnShowIngredientsBtnClicked"/>
+            
+            <Button
+                 x:Name="Home"
+                 Text="Home"
+                 IsVisible="True"
+                 BackgroundColor="DarkGoldenrod"
+                 SemanticProperties.Hint="Navigates Home"
+                 Margin="5"
+                 Padding="10,5"
+                 HorizontalOptions="End"
+                 Clicked="OnHomeBtnClicked"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-
-
-

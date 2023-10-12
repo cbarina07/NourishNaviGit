@@ -21,7 +21,7 @@ namespace NourishNaviGit
             // chatgptnet
             builder.Services.AddChatGpt(options =>
             {
-                options.UseOpenAI(apiKey: "", organization: "");
+                options.UseOpenAI(apiKey: "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", organization: "");
                 options.DefaultModel = ""; // Default: ChatGptModels.Gpt35Turbo
                 options.MessageLimit = 10; // Default: 10
                 options.MessageExpiration = TimeSpan.FromMinutes(5); // Default: 1 hour
